@@ -10,27 +10,32 @@ public class UserValidationService {
     private static int answerAboutLastName;
     private static int answerAboutAge;
 
-    public static void getTrueLengthOfInputFirstName() {
+    public static String getTrueLengthOfInputFirstName() {
         lengthOfFirstName = User.getFirstName().length();
         if (lengthOfFirstName < 3 || lengthOfFirstName > 15) {
-            answerAboutFirstName = 1;
-            UserValidationException.errorsOfInputFirstName(answerAboutFirstName);
+            return UserValidationException.ERROR_OF_FIRST_NAME;
+        }
+        else{
+            return "first name is valid";
         }
     }
 
-    public static void getTrueLengthOfInputLastName() {
+    public static String getTrueLengthOfInputLastName() {
         lengthOfLastName = User.getLastName().length();
         if (lengthOfLastName < 3 || lengthOfLastName > 15) {
-            answerAboutLastName = 1;
-            UserValidationException.errorsOfInputLastName(answerAboutLastName);
+            return UserValidationException.ERROR_OF_LAST_NAME;
+        }
+        else{
+            return "last name is valid";
         }
     }
 
-    public static void getTrueSizeOfInputAge(int userAge) {
+    public static String getTrueSizeOfInputAge(int userAge) {
         if (0 >= userAge || userAge>=120) {
-            answerAboutAge = 1;
-            UserValidationException.errorsOfInputAge(answerAboutAge);
+            return UserValidationException.ERROR_OF_AGE;
+        }
+        else{
+            return "age is valid";
         }
     }
-
 }

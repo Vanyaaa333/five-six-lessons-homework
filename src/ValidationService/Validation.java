@@ -11,8 +11,8 @@ public class Validation {
         String userLastName = Input.getString("Введите свою фамилию");
         int userAge = Input.getInt("Введите свой возраст");
         User user = new User(userFirstName , userLastName , userAge);
-        UserValidationService.getTrueLengthOfInputFirstName();
-        UserValidationService.getTrueLengthOfInputLastName();
-        UserValidationService.getTrueSizeOfInputAge(User.getAge());
+        System.out.println(UserValidationService.getTrueLengthOfInputFirstName());
+        System.out.println(UserValidationService.getTrueLengthOfInputLastName());
+        System.out.println(UserValidationService.getTrueSizeOfInputAge(User.getAge()));
     }
 }
