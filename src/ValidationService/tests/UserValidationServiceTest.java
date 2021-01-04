@@ -1,6 +1,5 @@
 package ValidationService.tests;
 
-import ValidationService.model.User;
 import ValidationService.service.UserValidationException;
 import ValidationService.service.UserValidationService;
 

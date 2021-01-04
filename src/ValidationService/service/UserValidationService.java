@@ -31,7 +31,7 @@ public class UserValidationService {
     }
 
     public static String getTrueSizeOfInputAge(int userAge) {
-        if (0 >= userAge || userAge>=120) {
+        if (0 > userAge || userAge>120) {
             return UserValidationException.ERROR_OF_AGE;
         }
         else{
