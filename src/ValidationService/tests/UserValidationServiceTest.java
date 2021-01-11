@@ -17,7 +17,7 @@ public class UserValidationServiceTest {
     }
 
     public static void lastNameTest(){
-        String actualShortFirstNameResult = UserValidationService.getTrueLengthOfInputFirstName();
+        String actualShortFirstNameResult = UserValidationService.getTrueLengthOfInputLastName();
         String expectedShortFirstNameResult = UserValidationException.ERROR_OF_LAST_NAME;
         if(actualShortFirstNameResult.equals(expectedShortFirstNameResult)){
             System.out.println("PASSED Last Name Test");
@@ -27,8 +27,8 @@ public class UserValidationServiceTest {
         }
     }
 
-    public static void ageTest(){
-        String actualShortFirstNameResult = UserValidationService.getTrueLengthOfInputFirstName();
+    public static void ageTest(int userAge){
+        String actualShortFirstNameResult = UserValidationService.getTrueSizeOfInputAge(userAge);
         String expectedShortFirstNameResult = UserValidationException.ERROR_OF_AGE;
         if(actualShortFirstNameResult.equals(expectedShortFirstNameResult)){
             System.out.println("PASSED Age Test");

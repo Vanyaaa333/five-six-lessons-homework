@@ -13,6 +13,6 @@ public class ValidationTestDemo {
             UserTest.isInputCharacteristicReceivedRight(userFirstName, userLastName, userAge);
             UserValidationServiceTest.firstNameTest();
             UserValidationServiceTest.lastNameTest();
-            UserValidationServiceTest.ageTest();
+            UserValidationServiceTest.ageTest(userAge);
     }
 }
